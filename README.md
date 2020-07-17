@@ -38,11 +38,14 @@ The event will take place online. You will be responsible for coordinating meeti
 
 Participants may use any of the quantum platforms provided by the following technical partners:
 D-Wave
+
 Xanadu
+
 IBM Q
+
 Zapata Computing
 
-Each partner will have dedicated staff member(s) available on slack or via zoom to support you during the project. Given the variety of timezones we will be operating in, please acknowledge that the technical support will not be available for the entire duration of the coding component of the hackathon.
+Each technology partner will have dedicated staff member(s) available on the respective partner's slack channel to support you during the project. Given the variety of timezones we will be operating in, please acknowledge that the technical support will not be available for the entire duration of the coding component of the hackathon.
 
 # Prizes
 
