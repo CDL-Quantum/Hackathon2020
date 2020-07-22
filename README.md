@@ -89,3 +89,48 @@ Open Start - 10:00 | Hackathon!!
 
 13:15 - 14:30 | Winner Announcements and Awards
 
+# Challenges
+The following problems were provided by our technical partners. Teams can choose to work on one of the problems or an appropriate generalization thereof.
+
+## D-Wave’s Challenge:
+Practical applications require domain knowledge and solutions that work at a real world scale. Hybrid development brings the power of quantum to the scale of classical. Users are challenged to select a practical problem and to solve it at scale with Leap's hybrid solver. As a hint, problems with graph structure like maximum independent set, structural imbalance and maximum cut can be translated to a binary quadratic model without additional variables. Check out https://cloud.dwavesys.com/leap/examples/ for ideas, but use your creativity! The best projects will be the ones that solve the most practical problems.
+
+For support, use the D-Wave's slack channel: #d-wave_training
+
+## Xanadu’s Challenge(s):
+
+### Hardware Challenge
+Find a set of weighted bipartite graphs that can be encoded into Xanadu’s X8 chip. Assign labels to each, encode them into the device, and use the generated samples to create feature vectors. Finally, use classical machine learning tools to classify the graphs using their feature vector representation.
+
+### Machine Learning Challenge:
+Strawberry Fields: Implement an algorithm for graph optimization and improve the performance of the algorithm by training the corresponding variational GBS distribution.
+PennyLane: Implement a QGAN and run it on two separate quantum computing backends, using one platform as a generator and the other as a discriminator.
+
+### Software Challenges:
+The following two hackathon challenges could lead to a pull request to the PennyLane repository:
+Provide functionality to convert a PennyLane QNode into a scikit-learn Estimator, giving access to the usual scikit-learn API including fit() and predict() methods.
+PennyLane contains the quantum-aware optimizers Rotosolve, QNG, and Rosalin. Rewrite them as PyTorch or TensorFlow native optimizers and provide a tutorial showing how they can be used to train a quantum model.
+
+### Heroic Challenge
+This is a very tough one, but could lead to an excellent tutorial or even a research paper. The input parameters to the quantum algorithm for vibronic spectra require electronic structure calculations that can also be performed using VQE on a quantum computer. Implement an end-to-end quantum algorithm for vibronic spectra by using a quantum computer to obtain the Doktorov operator for the vibronic transition and encode it into a GBS device to obtain the vibronic spectrum of a molecule.
+
+For support, use the Xanadu's slack channel: #xanadu_training
+
+## Zapata Computing’s Challenge:
+Working with Variational Quantum Algorithms (VQA) often means trying a lot of different ideas and benchmarking them against each other. In this challenge we would like you to integrate/implement some elements of VQA – optimizer, ansatz, measurement strategy, etc. – into Orquestra and benchmark it using other existing methods.
+Example of a project could be to use QAOA to solve Maximum Independent Set problem. You could implement the Model Gradient Descent optimizer (described here: https://arxiv.org/abs/2004.04197, appendix D) and compare it to optimizers such as Nelder-Mead, L-BFGS-B and SPSA (all available in Orquestra), using standard cost function as well as CVaR (described here: https://arxiv.org/abs/1907.04769).
+
+For support, use the Zapata's slack channel: #zapata-comuting_training
+
+## IBM Q’s Challenge:
+Morphological classification is key in our understanding of the large-scale structure of the universe. The use of Machine Learning for analyzing astrophysical datasets is on the rise [1] and it is expected next generation of instruments (LSST, SKA etc …) will generate bigger than ever datasets [2]
+Quantum Image Processing (QIMP) is an emerging field of Quantum Information Processing and can provide speedup over their classical counterparts [3] and we have seen progress in the Quantum  Machine Learning field as well.
+
+The challenge is as follow:
+Using an existing dataset (for example [4] and one of the known image representation (FRQI [5] or NEQR [6] for example), apply Quantum machine learning algorithms for galaxy classification.
+[1] https://arxiv.org/abs/1910.00774
+[2] https://doi.org/10.1093/mnras/stz3006
+[3] https://arxiv.org/abs/1801.01465
+[4] https://data.galaxyzoo.org/
+[5] https://pdfs.semanticscholar.org/0a3b/dfb66973144792533d763e9edaec40b2785b.pdf
+[6] https://www.researchgate.net/publication/257641933_NEQR_A_novel_enhanced_quantum_representation_of_digital_images
