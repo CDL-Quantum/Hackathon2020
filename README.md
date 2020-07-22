@@ -1,4 +1,4 @@
-![CDL Quantum Hackathon 2020](figures/CDL_logo.jpg)
+![CDL Quantum Hackathon 2020](CDL_logo.jpg)
 # CDL Quantum Hackathon 2020
 
 # Description
