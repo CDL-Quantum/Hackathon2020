@@ -94,7 +94,7 @@ class QuantumNaturalGradientOptim(Optimizer):
             fubinimetric = torch.tensor(self.qcircuit.metric_tensor([[],params_tensor.tolist()])).float() # uses the fubinimetric built in
             for p in group['params']:             
                 if p.grad is not None:
-                    natural_grad = fubinimetric@p.grad
+                    natural_grad = fubinimetric@p.grad.float()
                     p.data.add_(-natural_grad*self.lr)
 
     # Basically, the trick is to compute gdagger on the parameter update step.
