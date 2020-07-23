@@ -3,9 +3,15 @@
 ## Tackling the IBM Challenge
 Our team has tackled the IBM Challenge to classify a large existing dataset of galaxies using Quantum Machine Learning techniques. 
 
+## Motivation 
 
+Quantum Image Processing is an exiting new field showing a lot of promise. Expressing an image using quantum information would mean all of 
+the unique quantum properties like superposition or entanglement can apply to the image. QIMP can also provide speedup
+over its classical counterparts. In this work, we explore and analyzied the large-scale structure of the universe from the astrophysical datasets and applied
+Quantum machine learning algorithms for galaxy classification.
 
 ## Why was it a Challenge 
+
 Classification of large data requires large computational resources !
 
 
