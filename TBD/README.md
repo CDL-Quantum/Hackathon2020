@@ -13,9 +13,10 @@ Classification of large data requires large computational resources !
 
 
 ## The Solution we propose
+In following steps, we describe the general workflow we employ to tackle the challenge. 
 
-### 1.Getting the data and preprocessing it
-We obtain a raw dataset of galaxy images from the [Galaxy Zoo](https://data.galaxyzoo.org/)  
+### 1.Getting the data, defining the objective and preprocessing the data
+We obtain a numerical dataset that encodes thousands of galaxy images from the [Galaxy Zoo](https://data.galaxyzoo.org/). We assess the data to classify the galaxies into three classes- elliptical, spiral and uncertain. 
 
 ### 2.Encoding it onto quantum computer  
 
