@@ -19,7 +19,7 @@ def circuit(inputs, params):
     return qml.expval(qml.PauliZ(0)), qml.expval(qml.PauliY(1))
 
 @qml.qnode(dev)
-def circuit2(params):
+def circuit2(inputs, params):
     ansatz(params)
     return qml.expval(qml.PauliX(0))
 

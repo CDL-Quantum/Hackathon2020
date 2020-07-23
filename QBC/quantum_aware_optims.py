@@ -91,7 +91,7 @@ class QuantumNaturalGradientOptim(Optimizer):
     def step(self):
         for group in self.param_groups:
             params_tensor = group['params'][0]
-            fubinimetric = torch.tensor(self.qcircuit.metric_tensor([[],params_tensor.tolist()])).float() # uses the fubinimetric built in
+            fubinimetric = torch.tensor(self.qcircuit.metric_tensor([[],params_tensor.tolist()])).float() * 10 # uses the fubinimetric built in
             for p in group['params']:             
                 if p.grad is not None:
                     natural_grad = fubinimetric@p.grad.float()
