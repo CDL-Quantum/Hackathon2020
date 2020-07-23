@@ -11,12 +11,10 @@ def ansatz(params):
     qml.RY(params[1], wires=1)
     qml.CNOT(wires=[0, 1])
 
-
 @qml.qnode(dev)
 def circuit(params):
     ansatz(params)
     return qml.expval(qml.PauliZ(0)), qml.expval(qml.PauliY(1))
-
 
 @qml.qnode(dev)
 def circuit2(params):
@@ -24,9 +22,10 @@ def circuit2(params):
     return qml.expval(qml.PauliX(0))
 
 qcircuits = [circuit, circuit2]
-proportions = torch.Tensor([0.5, 0.8, -0.2])
-init_params = torch.Tensor([0.3, 0.25])
+proportions = torch.Tensor([0.5, 1.2, -0.2])
+init_params = torch.Tensor([2.429, 0.25])
+
 optim = RotoSolve(init_params,qcircuits,proportions)
-for n in range(100):
-    loss = optim.step()
-    print(loss)
+loss = optim.step()
+print(loss)
+print(optim.param_groups)

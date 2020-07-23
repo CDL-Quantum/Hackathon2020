@@ -6,7 +6,7 @@ import torch
 torch.halfpi = torch.acos(torch.zeros(1)).item() # no built-in torch.pi, this is pi/2
 # %%
 def evaluate_circuits(params, qcircuits):
-    """Evaluates quantum circuits as required """
+    """Evaluates each of the quantum circuits provided to build everything """
     circuit_evals = []
     for qcircuit in qcircuits: # there should be a list comprehension one-liner for this but I can't find it 
         circuit_eval = qcircuit(params)
@@ -17,7 +17,12 @@ def evaluate_circuits(params, qcircuits):
             circuit_evals.append(circuit_eval)
     return circuit_evals
 
-def rotocost(circuit_evals, proportions):
+def cost(circuit_evals, proportions):
+    """Takes the expectation values of the circuit evaluations and adds them according to the proportion
+    Arguments:
+        circuit_evals :[Float]: the expectation values
+        proportions :[Float]: the mixing coefficients
+    """
     cost = 0
     for circ_eval, prop in zip(circuit_evals,proportions):
         cost += circ_eval * prop
@@ -33,6 +38,11 @@ class RotoSolve(Optimizer):
         super().__init__([params], defaults = {})
         self.qcircuits = qcircuits
         self.proportions = proportions
+        self.final_params = params.tolist()
+        init_evals = evaluate_circuits(self.final_params, qcircuits)
+        initial_cost = cost(init_evals, proportions)
+        self.losses = [initial_cost]
+
         
 
     def step(self):
@@ -42,15 +52,15 @@ class RotoSolve(Optimizer):
             for idx in range(len(params_)):
                 params_[idx] = 0
                 circuit_evals = torch.Tensor(evaluate_circuits(params_, self.qcircuits))
-                cost0 = rotocost(circuit_evals, self.proportions)
+                cost0 = cost(circuit_evals, self.proportions)
                 
                 params_[idx] = torch.halfpi
                 circuit_evals = torch.Tensor(evaluate_circuits(params_, self.qcircuits))
-                costplus = rotocost(circuit_evals, self.proportions)
+                costplus = cost(circuit_evals, self.proportions)
                 
                 params_[idx] = -torch.halfpi
                 circuit_evals = torch.Tensor(evaluate_circuits(params_, self.qcircuits))
-                costminus = rotocost(circuit_evals, self.proportions)
+                costminus = cost(circuit_evals, self.proportions)
 
                 a = torch.atan2(
                     2.0 * cost0 - costplus - costminus, costplus - costminus
@@ -60,8 +70,10 @@ class RotoSolve(Optimizer):
                     params_[idx] += 4+torch.halfpi
                 group['params'] = [torch.FloatTensor(params_)]
         step_circuit_evals = evaluate_circuits(params_, self.qcircuits)
-        return rotocost(step_circuit_evals, self.proportions)
-        
+        cost = cost(step_circuit_evals, self.proportions)
+        self.losses.append(cost)
+        self.final_params = params_
+        return cost
 
 
 
