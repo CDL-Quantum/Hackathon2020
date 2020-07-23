@@ -1,5 +1,9 @@
 ![CDL Hackaton](img/CDL_logo.png)
 
+## Motivation
+
+As part of the IBM Challenge, our goal was not just to tackle the QIMP problem but also propose potential applications and further researches.
+
 ## Business Applications and Potential Research
 
 
