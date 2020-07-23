@@ -14,7 +14,9 @@ More significantly, recent product launches and other announcements by Amazon We
 
 ## Business Applications and Potential Research Applications
 
-Here are a few examples of potential application and further investigations.
+It has been shown that quantum counterparts of several classical ML algorithms provide speedsup. Below is a table that summarizes performance of a few quantum algorithms relative to their classical counterparts.
+
+Here we list few areas of research where QML is significantly being explored and can potentially gain advantage from these techniques.
 
 1. Mapping out molecules and atoms for the creation of new materials by [applying ML](https://pubs.acs.org/doi/10.1021/acs.nanolett.9b04090) to accelerate material discovery, including the use of active learning to guide experimental design.
 
