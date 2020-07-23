@@ -39,4 +39,4 @@ Exploring other platforms
 
 ## Business Application
 
-Check out the business proposals ![here]{https://github.com/olgOk/Hackathon2020/blob/master/TBD/BusinessCases.md) 
+Check out the business proposals ![here](https://github.com/olgOk/Hackathon2020/blob/master/TBD/BusinessCases.md) 
