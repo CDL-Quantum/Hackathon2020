@@ -1,4 +1,13 @@
-# Traveling Salesman Problem
+# JediMasters for Hackathon 2020
+
+We attempted two problems from two two different hardware providers as part fo this hackathon.
+
+As part of the DWave challenge, we attempted to find an efficient way of generating volunteer food delivery routes for food banks serving the less fortunate segments of the society using a modified version of the Multiple Travelling Salesman problem and DWave Leap Hybrid Solver.
+
+As part of the IBM Challenge, we attempted the Galaxy classification with FRQI utilizing Quantum Image Classification.
+
+
+We have provided a brief explanation of the TSP Algorithm used for the food bank solution below :
 
 ## Mapping Traveling Salesman Problem into QUBO (Quadratic Unconstrained Binary Optimization)
 In order to find approximately optimal solutions of Traveling Salesman Problem we map the problem into QUBO model.  
