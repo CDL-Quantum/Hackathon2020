@@ -1,3 +1,5 @@
+![CDL 2020 Cohort Project](img/CDL_logo.jpg)
+
 ## Tackling the IBM Challenge
 Our team has tackled the IBM Challenge to classify a large existing dataset of galaxies using Quantum Machine Learning techniques. 
 
