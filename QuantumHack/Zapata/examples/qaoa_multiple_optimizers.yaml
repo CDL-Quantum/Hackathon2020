@@ -1,0 +1,171 @@
+ZapOSApiVersion: v1alpha1
+kind: Workflow
+
+resources:
+- name: z-quantum-core
+  type: git
+  parameters:
+    url: "git@github.com:zapatacomputing/z-quantum-core.git"
+    branch: "master"
+- name: z-quantum-qaoa
+  type: git
+  parameters:
+    url: "git@github.com:zapatacomputing/z-quantum-qaoa.git"
+    branch: "master"
+- name: z-quantum-optimizers
+  type: git
+  parameters:
+    url: "git@github.com:zapatacomputing/z-quantum-optimizers.git"
+    branch: "master"
+- name: qe-qhipster
+  type: git
+  parameters:
+    url: "git@github.com:zapatacomputing/qe-qhipster.git"
+    branch: "master"
+- name: qe-openfermion
+  type: git
+  parameters:
+    url: "git@github.com:zapatacomputing/qe-openfermion.git"
+    branch: "master"
+
+metadata:
+  generateName: qaoa-example-
+
+spec:
+  entrypoint: main
+  arguments:
+    parameters:
+    - s3-bucket: quantum-engine
+    - s3-key: projects/qaoa/
+    - docker-image: z-quantum-default
+    - docker-tag: latest
+
+  templates:
+  - name: main
+    steps:
+    - - name: generate-graph
+        template: generate-erdos-renyi-graph
+        arguments:
+          parameters:
+            - n-nodes: "5"
+            - edge-probability: "0.8"
+            - resources: [z-quantum-core]
+            - docker-image: "{{workflow.parameters.docker-image}}"
+            - docker-tag: "{{workflow.parameters.docker-tag}}"
+    - - name: get-maxcut-hamiltonian
+        template: get-maxcut-hamiltonian
+        arguments:
+          parameters:
+          - resources: [z-quantum-core, qe-openfermion, z-quantum-qaoa]
+          - docker-image: "{{workflow.parameters.docker-image}}"
+          - docker-tag: "{{workflow.parameters.docker-tag}}"
+          artifacts:
+          - graph:
+              from: '{{steps.generate-graph.outputs.artifacts.graph}}'
+    - - name: build-circuit-template
+        template: build-farhi-qaoa-circuit-template
+        arguments:
+          parameters:
+          - resources: [z-quantum-core, qe-openfermion, z-quantum-qaoa]
+          - docker-image: "{{workflow.parameters.docker-image}}"
+          - docker-tag: "{{workflow.parameters.docker-tag}}"
+          artifacts:
+          - hamiltonian:
+              from: '{{steps.get-maxcut-hamiltonian.outputs.artifacts.hamiltonian}}'
+    - - name: generate-random-ansatz-params
+        template: generate-random-ansatz-params
+        arguments:
+          parameters:
+          - min-val: "1"
+          - max-val: "2"
+          - n-layers: "1"
+          - resources: [z-quantum-core]
+          - docker-image: "{{workflow.parameters.docker-image}}"
+          - docker-tag: "{{workflow.parameters.docker-tag}}"
+          artifacts:
+          - ansatz:
+              from: '{{steps.build-circuit-template.outputs.artifacts.ansatz}}'
+
+      - name: build-uniform-parameter-grid
+        template: build-uniform-parameter-grid
+        arguments:
+          parameters:
+          - n-layers: "1"
+          - min-value: "0"
+          - max-value: "3.14159265359+0.05"
+          - step: "0.1047197551"
+          - resources: [z-quantum-core]
+          - docker-image: "{{workflow.parameters.docker-image}}"
+          - docker-tag: "{{workflow.parameters.docker-tag}}"
+          artifacts:
+          - ansatz:
+              from: '{{steps.build-circuit-template.outputs.artifacts.ansatz}}'
+    - - name: optimize-variational-circuit-grid-search
+        template: optimize-variational-circuit
+        arguments:
+          parameters:
+          - backend-specs: "{'module_name': 'qeqhipster.simulator', 'function_name': 'QHipsterSimulator'}"
+          - optimizer-specs: "{'module_name': 'zquantum.optimizers.grid_search', 'function_name': 'GridSearchOptimizer', 'options': {'keep_value_history': True}}"
+          - resources: [z-quantum-core, qe-openfermion, z-quantum-optimizers, qe-qhipster, z-quantum-qaoa]
+          - docker-image: qe-qhipster
+          - docker-tag: latest
+          artifacts:
+          - ansatz: 
+              from: '{{steps.build-circuit-template.outputs.artifacts.ansatz}}'
+          - initial-parameters:
+              from: '{{steps.generate-random-ansatz-params.outputs.artifacts.params}}'
+          - qubit-operator:
+              from: '{{steps.get-maxcut-hamiltonian.outputs.artifacts.hamiltonian}}'
+          - parameter-grid:
+              from: '{{steps.build-uniform-parameter-grid.outputs.artifacts.parameter-grid}}'
+
+      - name: optimize-variational-circuit-bfgs
+        template: optimize-variational-circuit
+        arguments:
+          parameters:
+          - backend-specs: "{'module_name': 'qeqhipster.simulator', 'function_name': 'QHipsterSimulator'}"
+          - optimizer-specs: "{'module_name': 'zquantum.optimizers.scipy_optimizer', 'function_name': 'ScipyOptimizer', 'method': 'L-BFGS-B', 'options': {'keep_value_history': True}}"
+          - resources: [z-quantum-core, qe-openfermion, z-quantum-optimizers, qe-qhipster, z-quantum-qaoa]
+          - docker-image: qe-qhipster
+          - docker-tag: latest
+          artifacts:
+          - ansatz: 
+              from: '{{steps.build-circuit-template.outputs.artifacts.ansatz}}'
+          - initial-parameters:
+              from: '{{steps.generate-random-ansatz-params.outputs.artifacts.params}}'
+          - qubit-operator:
+              from: '{{steps.get-maxcut-hamiltonian.outputs.artifacts.hamiltonian}}'
+
+      - name: optimize-variational-circuit-nelder-mead
+        template: optimize-variational-circuit
+        arguments:
+          parameters:
+          - backend-specs: "{'module_name': 'qeqhipster.simulator', 'function_name': 'QHipsterSimulator'}"
+          - optimizer-specs: "{'module_name': 'zquantum.optimizers.scipy_optimizer', 'function_name': 'ScipyOptimizer', 'method': 'Nelder-Mead', 'options': {'keep_value_history': True}}"
+          - resources: [z-quantum-core, qe-openfermion, z-quantum-optimizers, qe-qhipster, z-quantum-qaoa]
+          - docker-image: qe-qhipster
+          - docker-tag: latest
+          artifacts:
+          - ansatz: 
+              from: '{{steps.build-circuit-template.outputs.artifacts.ansatz}}'
+          - initial-parameters:
+              from: '{{steps.generate-random-ansatz-params.outputs.artifacts.params}}'
+          - qubit-operator:
+              from: '{{steps.get-maxcut-hamiltonian.outputs.artifacts.hamiltonian}}'
+
+      - name: optimize-variational-circuit-cma-es
+        template: optimize-variational-circuit
+        arguments:
+          parameters:
+          - backend-specs: "{'module_name': 'qeqhipster.simulator', 'function_name': 'QHipsterSimulator'}"
+          - optimizer-specs: "{'module_name': 'zquantum.optimizers.cma_es_optimizer', 'function_name': 'CMAESOptimizer', 'options': {'popsize': 5, 'sigma_0': 0.1, 'tolx': 1e-3, 'keep_value_history': True}}"
+          - resources: [z-quantum-core, qe-openfermion, z-quantum-optimizers, qe-qhipster, z-quantum-qaoa]
+          - docker-image: qe-qhipster
+          - docker-tag: latest
+          artifacts:
+          - ansatz: 
+              from: '{{steps.build-circuit-template.outputs.artifacts.ansatz}}'
+          - initial-parameters:
+              from: '{{steps.generate-random-ansatz-params.outputs.artifacts.params}}'
+          - qubit-operator:
+              from: '{{steps.get-maxcut-hamiltonian.outputs.artifacts.hamiltonian}}'
