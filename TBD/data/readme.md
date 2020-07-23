@@ -1,1 +1,1 @@
-Here goes the data used
+The file "dataset_competition_ibm.csv" is the one used for the classification tasks. The raw dataset can be found on this link: http://zooniverse-data.s3.amazonaws.com/galaxy-zoo-2/zoo2MainSpecz.csv.gz
