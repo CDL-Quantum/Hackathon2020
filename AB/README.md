@@ -22,15 +22,15 @@ We use the EMBER data set and do a traditional DBSCAN to form a baseline cluster
 
 ### Binary Clustering Random Data
 
-![Alt text](img.jpg?raw=true "Title")
+![Alt text](binaryclustering.png?raw=true "Title")
 
 ### Binary Clustering 1 pass Ising formulation
 
-![Alt text](img.jpg?raw=true "Title")
+![Alt text](TABUClustering.png?raw=true "Title")
 
 ### Binary clustering 2 pass Ising formulation
 
-![Alt text](3.jpg?raw=true "Title")
+![Alt text](3.png?raw=true "Title")
 
 ### D-Wave Hybrid Solver 
 
