@@ -22,10 +22,15 @@
 
 # Result
 
-  - QAOA
-  - Gurobi+D-Wave QPU: get the value of objective function greater than 0, which means that there is one sub-area that needs to have more water than other sub-areas.
+  - Colyba + QAOA
+  - Gurobi+D-Wave QPU: Able to get optimal water allocation solution for sub-areas in different time. Still need to be benchmarked.
 
 # Future plan
 
   - Find ways not to use Gurobi.
   - Get information about which sub-area needs to be allocated more water.
+  - Add in many more variables that will take advantage of QC:
+     - Multiple reservoirs in the same river system
+     - Deeper layers of crops types and water utilization types
+     - Additional IoT data at higher spatial and temporal resolution
+ 
