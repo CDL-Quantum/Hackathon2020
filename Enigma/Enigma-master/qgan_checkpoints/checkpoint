@@ -1,0 +1,2 @@
+model_checkpoint_path: "qubit_False_ckpt-1"
+all_model_checkpoint_paths: "qubit_False_ckpt-1"
