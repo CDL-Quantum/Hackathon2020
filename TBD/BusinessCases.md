@@ -14,7 +14,7 @@ More significantly, recent product launches and other announcements by Amazon We
 
 ## Business Applications and Potential Research Applications
 
-It has been shown that quantum counterparts of several classical ML algorithms provide speedsup. Below is a table that summarizes performance of a few quantum algorithms relative to their classical counterparts.
+It has been shown that quantum counterparts of several classical ML algorithms provide speedup.
 
 Here we list few areas of research where QML is significantly being explored and can potentially gain advantage from these techniques.
 
