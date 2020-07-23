@@ -1,6 +1,6 @@
-# Utilizing Quantum Annealing to Cluster Malicious Software
+# Quantum Annealing for Clustering Malicious Software
 
-## Team AB
+## Team <A|B>
 ### Members
 * Nick Allgood
 * Ajinkya Borle
