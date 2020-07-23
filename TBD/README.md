@@ -26,7 +26,7 @@ The techniques used here were filtering, projection and merging using the tidyve
 Having the dataset preprocessed we used sklearn package to normalize the data using the MinMAxScaler and PCA to reduce the dimensionality of the inputs. We remain with the main two PCA components which were fed to the quantum subroutines. 
 
 ### 3.Applying the classical algorithm Support Vector Machine(SVM) and quantum algorithms Quantum Support Vector Machines(QSVM), Variational Quantum Classifier(VQC)
-The Support Vector Machine(SVM) is a common algorithm used in supervised learning process. Given  labeled training data, it outputs an optimal hyperplane which is able to categorize new examples. It can be generalized to nonlinear hyper-surfaces via kernel methods allowing it perform even in higher dimensions[[2]](https://www.springer.com/gp/book/9780387987804). However, if the dimensions in which data points are projected, it becomes difficult for classical computers to compute through large computations. The quantum counterpart of the SVM- the **Quantum Support Vector Machines(QSVM)**[[3]](https://medium.com/@aliceliu2004/quantum-support-vector-machines-a-new-era-of-ai-1262dd4b2c7e) takes the classical machine learning algorithm and performs the support vector machine on a quantum circuit in order to be efficiently processed on a quantum computer. QSVM is shown to provide an exponential speedup *O(log N)* relative to its classical counterpart.
+The **Support Vector Machine(SVM)** is a common algorithm used in supervised learning process. Given  labeled training data, it outputs an optimal hyperplane which is able to categorize new examples. It can be generalized to nonlinear hyper-surfaces via kernel methods allowing it perform even in higher dimensions[[2]](https://www.springer.com/gp/book/9780387987804). However, if the dimensions in which data points are projected, it becomes difficult for classical computers to compute through large computations. The quantum counterpart of the SVM- the **Quantum Support Vector Machines(QSVM)**[[3]](https://medium.com/@aliceliu2004/quantum-support-vector-machines-a-new-era-of-ai-1262dd4b2c7e) takes the classical machine learning algorithm and performs the support vector machine on a quantum circuit in order to be efficiently processed on a quantum computer. QSVM is shown to provide an exponential speedup *O(log N)* relative to its classical counterpart.
 The figure below shows comparison of resource costs of classical and quantum image processing for an image of N (i.e., n = log2 N) pixel.
 
 ![CDL Hackaton](img/qsvm.PNG)
@@ -51,6 +51,9 @@ An extensive document detailing potential applications can be found [here](https
 
 
 ## Future work and possibilities 
-Exploring other platforms
+### Pre-processing the data using QPCA
+We consider the possibility of using Quantum Principal Component Analysis[(QPCA)](https://arxiv.org/abs/1307.0401) for pre-processing the data.
+### Image processing using D-Wave Platform
+
 
 
