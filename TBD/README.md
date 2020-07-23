@@ -5,24 +5,34 @@ Our team has tackled the IBM Challenge to classify a large existing dataset of g
 
 
 
-## Why was it a Challenge 
-Classification of large data requires large computational resources !
+## Why is it a Challenge 
+### Classification of large data requires large computational resources !
+The data we want to process is usually made of millions of images issued from high resolution telescopes. This means that the processing of this data induces the ability to store huge amount of data, which is something that can not be ensured using classical computation.
+By processing we may talk about classification, clustering, feature recognition, which can all be gathered into the notion of image processing.
 
-
+For the problem considered here specifically, we focus on a classification problem, which is a branch of supervised learning.
 
 
 
 ## The Solution we propose
+Quantum computing can be useful in its ability to process huge amounts of data provided the ability to perform an efficient mapping of the classical data on quantum bits.
+
 In following steps, we describe the general workflow we employ to tackle the challenge. 
 
 ### 1.Getting the data, defining the objective and preprocessing the data using R.
-We obtain a numerical dataset that encodes thousands of galaxy images from the [Galaxy Zoo](https://data.galaxyzoo.org/).We use R for the data manipulation. The dataset we used was extracted from the paper [here](https://www.researchgate.net/publication/280534264_Classifying_Galaxy_Images_through_Support_Vector_Machines). We cleaned everything up in order to remain with the first two categories of task 1. Our purpose was to use the features according to those categories to classify each galaxy as “smooth” or “features or disk”. After the cleaning process was finished we got an 11 feature dataset from which one of them was the target. Then, we tackle a binary classification task.
-The final dataset has 55k samples.
+We obtain a numerical dataset that encodes thousands of galaxy images from the [Galaxy Zoo](https://data.galaxyzoo.org/).We use R for the data manipulation. The dataset we used was extracted from the paper [here](https://www.researchgate.net/publication/280534264_Classifying_Galaxy_Images_through_Support_Vector_Machines). The images are brought down to a series of arrays characterizing the colors and intensities of each pixel.
+Data compression is used using several methods in order to get data size pluggable onto a quantum computer.
+
+We clean everything up in order to remain with the first two categories of task 1. Our purpose was to use the features according to those categories to classify each galaxy as “smooth” or “features or disk”. 
 
 The techniques used here were filtering, projection and merging using the tidyverse packages in R. The idea could work for any other category of the original dataset and for any different task. The data manipulation is shown in [data_manipulation.ipynb](https://github.com/olgOk/Hackathon2020/blob/master/TBD/data_manipulation.ipynb).
 
 
-### 2.Normalization and dimensionality reduction (using PCA)  
+### 2.Normalization and dimensionality reduction (using PCA) 
+The methods we decide to implement to deal with those images are Quantum SVM, and Variational Quantum Classifier.
+To perform those tasks, we first need to adapt the input to yield a tractable problem for a current machine (or qasm-simulator in our case).
+Since the IBMQ allows to do current SVM over 2 or 3 features, we perform a Principal Component Analysis on the preprocessed data to yield the principal components and keep only the most relevant ones. (We go from a 37 features to extract only 2 main features).
+
 Having the dataset preprocessed we used sklearn package to normalize the data using the MinMAxScaler and PCA to reduce the dimensionality of the inputs. We remain with the main two PCA components which were fed to the quantum subroutines. 
 
 ### 3.Applying the classical algorithm Support Vector Machine(SVM) and quantum algorithms Quantum Support Vector Machines(QSVM), Variational Quantum Classifier(VQC)
@@ -34,6 +44,15 @@ The figure below shows comparison of resource costs of classical and quantum ima
 Similarly, we use another quantum algorithm for classification- the **Variational Quantum Classifier**. Similar to QSVM, the VQC algorithm also applies to classification problems. VQC uses the variational method to solve such problems in a quantum processor. Specifically, it optimizes a parameterized quantum circuit to provide a solution that cleanly separates the data.
 
 We apply these three algoriothms to obtain the classification of forementioned dataset and compare the results.
+
+To run the quantum subroutines on the backend, we need to implement following steps:
+
+-Amplitude encoding of the provided input
+
+-Creation of qubit registers necessary to perform training and testing operations
+
+-Sampling and post processing of the data to obtain results of classification
+
 The code for 3 algorithms are shown in [SVM.ipynb](https://github.com/olgOk/Hackathon2020/blob/master/TBD/SVM.ipynb), [qSVM.ipynb](https://github.com/olgOk/Hackathon2020/blob/master/TBD/qSVM.ipynb), [VQC.ipynb](https://github.com/olgOk/Hackathon2020/blob/master/TBD/VQC.ipynb) respectively.
 
 
