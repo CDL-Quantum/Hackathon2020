@@ -19,7 +19,7 @@ In following steps, we describe the general workflow we employ to tackle the cha
 We obtain a numerical dataset that encodes thousands of galaxy images from the [Galaxy Zoo](https://data.galaxyzoo.org/).We use R for the data manipulation. The dataset we used was extracted from the paper [here](https://www.researchgate.net/publication/280534264_Classifying_Galaxy_Images_through_Support_Vector_Machines). We cleaned everything up in order to remain with the first two categories of task 1. Our purpose was to use the features according to those categories to classify each galaxy as “smooth” or “features or disk”. After the cleaning process was finished we got an 11 feature dataset from which one of them was the target. Then, we tackle a binary classification task.
 The final dataset has 55k samples.
 
-The techniques used here were filtering, projection and merging using the tidyverse packages in R. The idea could work for any other category of the original dataset and for any different task.
+The techniques used here were filtering, projection and merging using the tidyverse packages in R. The idea could work for any other category of the original dataset and for any different task. The data manipulation is shown in [data_manipulation.ipynb](https://github.com/olgOk/Hackathon2020/blob/master/TBD/data_manipulation.ipynb).
 
 
 ### 2.Normalization and dimensionality reduction (using PCA)  
