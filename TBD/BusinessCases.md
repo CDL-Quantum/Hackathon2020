@@ -22,11 +22,11 @@ Here we list few areas of research where QML is significantly being explored and
 
 2. Modeling molecular interactions at an atomic level, allowing new pharmaceuticals and [medical research.](https://doi.org/10.1038/s41570-020-0189-9)
  
-3. [NASA’ s QuAIL](https://ntrs.nasa.gov/search.jsp?R=20180001867) discoveries of Stars, Solar systems and Earth-like exoplanets based on data received from Space Probes.  
+3. [NASA’ s QuAIL](https://ntrs.nasa.gov/search.jsp?R=20180001867) is a laboratory dedicated to study and develop use of quantum computing to improve performance and implementations of existing AI algorithms to assist in handling data.  
 
-4. Enchance the patterns of [recognitions and classification.](https://arxiv.org/abs/1804.11326)
+4. Enchancing the patterns of [recognitions and classification.](https://arxiv.org/abs/1804.11326)
 
-5. Examine the potential cataclysmic growth of Big Data and AI when [Quantum Computing](https://link.springer.com/article/10.1186/s40537-019-0202-7) becomes another piece of the future jigsaw puzzle for AI and Human Interaction. 
+5. Examining the potential cataclysmic growth of Big Data and AI with [Quantum Computing](https://link.springer.com/article/10.1186/s40537-019-0202-7).
 
 5. Efficient image and video processing encoded in qubits and further securely transmitting through networks protected by quantum technology.
 
