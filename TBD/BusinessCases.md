@@ -2,7 +2,7 @@
 
 ## Motivation
 
-As part of the IBM Challenge, our goal was not just to tackle the QIMP problem but also to propose potential applications and further researches. 
+As part of the IBM Challenge, our goal was not just to tackle the QIMP problem but also to propose potential applications and further researches. While working on the challenge we realized that the challenge at the heart of it is inability of classical computers to perform large computations. In today's data driven world, it becomes essential to address this problem. Machine learning with its innumerable applications faces this problem. This problem is addressed  
 
 ## Business Applications and Potential Research
 
