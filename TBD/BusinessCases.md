@@ -2,7 +2,7 @@
 
 ## Motivation
 
-As part of the IBM Challenge, our goal was not just to tackle the QIMP problem but also to propose potential applications and further researches.
+As part of the IBM Challenge, our goal was not just to tackle the QIMP problem but also to propose potential applications and further researches. 
 
 ## Business Applications and Potential Research
 
