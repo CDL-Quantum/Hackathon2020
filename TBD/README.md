@@ -34,7 +34,7 @@ The figure below shows comparison of resource costs of classical and quantum ima
 Similarly, we use another quantum algorithm for classification- the **Variational Quantum Classifier**. Similar to QSVM, the VQC algorithm also applies to classification problems. VQC uses the variational method to solve such problems in a quantum processor. Specifically, it optimizes a parameterized quantum circuit to provide a solution that cleanly separates the data.
 
 We apply these three algoriothms to obtain the classification of forementioned dataset and compare the results.
-The code for 3 algorithms are shown in [SVM.ipynb](https://github.com/olgOk/Hackathon2020/blob/master/TBD/SVM.ipynb), [qSVM.ipynb](https://github.com/olgOk/Hackathon2020/blob/master/TBD/qSVM.ipynb), [VQC.ipynb]() respectively.
+The code for 3 algorithms are shown in [SVM.ipynb](https://github.com/olgOk/Hackathon2020/blob/master/TBD/SVM.ipynb), [qSVM.ipynb](https://github.com/olgOk/Hackathon2020/blob/master/TBD/qSVM.ipynb), [VQC.ipynb](https://github.com/olgOk/Hackathon2020/blob/master/TBD/VQC.ipynb) respectively.
 
 
 
