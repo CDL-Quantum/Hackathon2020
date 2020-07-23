@@ -1,4 +1,4 @@
-![CDL Hackaton](img/CDL_logo.jpg)
+![CDL Hackaton](img/CDL_logo.png)
 
 ## Tackling the IBM Challenge
 Our team has tackled the IBM Challenge to classify a large existing dataset of galaxies using Quantum Machine Learning techniques. 
