@@ -6,6 +6,17 @@ As part of the IBM Challenge, our goal was not just to tackle the QIMP problem b
 
 ## Business Applications and Potential Research
 
+Here are a few examples of potential application and further investigations:
+
+1 . Mapping out molecules and atoms for the creation of new materials
+Modeling molecular interactions at an atomic level, allowing new pharmaceuticals and medical research[1] https://doi.org/10.1038/s41570-020-0189-9 
+ 
+Space Exploration and the discovery of planets
+NASA’ s QuAIL(Quantum artificial intelligence lab) : https://ntrs.nasa.gov/search.jsp?R=20180001867
+Mapping out the human mind https://link.springer.com/article/10.1186/s40537-019-0202-7
+More enhanced pattern recognition and classification https://arxiv.org/abs/1804.11326
+Better understanding of nanoparticles https://pubs.acs.org/doi/10.1021/acs.nanolett.9b04090
+Efficient image and video processing encoded in qubits and further securely transmitting through networks protected by quantum technology
 
 ## Business Cases
 
