@@ -24,11 +24,11 @@ The figure below shows comparison of resource costs of classical and quantum ima
 
 
 
-## Implications of the Solution
+## Implications of the Solution and potential business applications
 The solution we provide addresses an important problem of lack of computational capabilities. We explore the importance of Quantum Machine Learning techniques in the context of Quantum Image Processing and extend its potential applications to several other fields like space exploration, nanotechnology, material design, medical research etc. 
 The Quantum Support Vector Machine
 
-Link to An extensive document detailing potential applications 
+An extensive document detailing potential applications can be found [here](https://github.com/olgOk/Hackathon2020/blob/master/TBD/BusinessCases.md).
 
 
 
@@ -37,6 +37,4 @@ Link to An extensive document detailing potential applications
 ## Future work and possibilities 
 Exploring other platforms
 
-## Business Application
 
-Check out the business proposals ![here](https://github.com/olgOk/Hackathon2020/blob/master/TBD/BusinessCases.md) 
