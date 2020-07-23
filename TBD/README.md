@@ -40,6 +40,7 @@ The code for 3 algorithms are shown in [SVM.ipynb](https://github.com/olgOk/Hack
 
 
 ## Analysis of the solution
+The comparison for various parameters like time, accuracy for the three algorithms has been shown in [plots.ipynb](https://github.com/olgOk/Hackathon2020/blob/master/TBD/plots.ipynb).
 
 ## Potential business applications
 The solution we provide addresses an important problem of lack of computational capabilities. We explore the importance of Quantum Machine Learning techniques in the context of Quantum Image Processing and extend its potential applications to several other fields like space exploration, nanotechnology, material design, medical research etc. 
@@ -52,9 +53,10 @@ An extensive document detailing potential applications can be found [here](https
 
 
 ## Future work and possibilities 
-### Pre-processing the data using QPCA
-We consider the possibility of using Quantum Principal Component Analysis[(QPCA)](https://arxiv.org/abs/1307.0401) for pre-processing the data.
-### Image processing using D-Wave Platform
+### Pre-processing the data using quantum sub-routines
+We consider the possibility of Use more quantum subroutines for the preprocessing of the data ([Quantum PCA](https://arxiv.org/abs/1307.0401)on the raw images themselves, use of D-Wave annealer to proceed with feature selection). 
+### Analysis of the circuit optimization for the VQC to look for better performance and faster results
+
 
 
 
