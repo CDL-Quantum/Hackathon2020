@@ -1,6 +1,6 @@
-# JediMasters for Hackathon 2020
+# Attempted Solutions for Hackathon 2020
 
-We attempted two problems from two two different hardware providers as part fo this hackathon.
+We attempted two problems from two different hardware providers as part of this hackathon.
 
 As part of the DWave challenge, we attempted to find an efficient way of generating volunteer food delivery routes for food banks serving the less fortunate segments of the society using a modified version of the Multiple Travelling Salesman problem and DWave Leap Hybrid Solver.
 
