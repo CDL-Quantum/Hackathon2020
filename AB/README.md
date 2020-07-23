@@ -16,7 +16,7 @@ Clustering malicious software is a very useful and researched topic in the field
 
 ## Process
 
-We use the EMBER data set and do a traditional DBSCAN to form a baseline clustering of data classically. We then prepare the data in the same fashion as we did with DBSCAN, but instead of DBSCAN, we formulate the problem into an Ising Hamiltonian suitable for the D-Wave hybrid solver. 
+We use the EMBER data set and do a traditional DBSCAN to form a baseline clustering of data classically. We then formulate the data into an Ising hamiltonian and run it through a classical TABU solver to ensure we are on the right path. Once verified, we continue to run the same hamiltonian on the D-Wave hybrid solver.
 
 ## Results
 
