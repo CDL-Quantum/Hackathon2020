@@ -26,7 +26,9 @@ The figure below shows comparison of resource costs of classical and quantum ima
 
 ![CDL Hackaton](img/qsvm.PNG)
 
-Similarly, we use another quantum algorithm for classification- the **Variational Quantum Classifier**.
+Similarly, we use another quantum algorithm for classification- the **Variational Quantum Classifier**. Similar to QSVM, the VQC algorithm also applies to classification problems. VQC uses the variational method to solve such problems in a quantum processor. Specifically, it optimizes a parameterized quantum circuit to provide a solution that cleanly separates the data.
+
+We apply these three algoriothms to obtain the classification of forementioned dataset and compare the results.
 
 
 
