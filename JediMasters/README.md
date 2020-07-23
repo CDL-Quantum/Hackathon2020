@@ -1,11 +1,14 @@
-# Attempted Solutions for Hackathon 2020
+# Solutions for Hackathon 2020
 
 We attempted two problems from two different hardware providers as part of this hackathon.
 
 As part of the DWave challenge, we attempted to find an efficient way of generating volunteer food delivery routes for food banks serving the less fortunate segments of the society using a modified version of the Multiple Travelling Salesman problem and DWave Leap Hybrid Solver.
 
+[Classical Method Solution](https://github.com/tina-seb/CohortProject_2020/blob/master/Project_2_VQE_Molecules/S1_Classical_Methods_Demo.ipynb)
+
 As part of the IBM Challenge, we attempted the Galaxy classification with FRQI utilizing Quantum Image Classification.
 
+[Classical Method Solution](https://github.com/tina-seb/CohortProject_2020/blob/master/Project_2_VQE_Molecules/S1_Classical_Methods_Demo.ipynb)
 
 We have provided a brief explanation of the TSP Algorithm used for the food bank solution below :
 
