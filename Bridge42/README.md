@@ -18,7 +18,7 @@ Other applications include:
 - other _technology mappings in semiconductor chip design_.
  
 ## This repository contains:
-- Code for formulating a QUBO instance of rectangle packing problem in `models` directory
-- Code for running the the QUBO on DWave machine or simulators or hybrid in `dwave` directory`
-- Tools for vizualization in the `palnner` directory
+- Code for formulating a QUBO instance of rectangle packing problem by several different approaches in `drafts` directory
+- Code for running the QUBO on DWave machine or simulators or hybrid in `dwave_solution` directory`
+- Tools for vizualization in the `plаnner` directory
 - A jupyter notebook for a demo
