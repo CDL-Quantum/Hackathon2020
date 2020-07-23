@@ -1,6 +1,6 @@
 ![CDL Hackaton](img/CDL_logo.png)
 
-## Business Application and Potential Research
+## Business Applications and Potential Research
 
 
 ## Business Cases
