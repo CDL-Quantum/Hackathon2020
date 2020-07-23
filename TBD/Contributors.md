@@ -3,3 +3,4 @@
 ## Team Members 
 
 ![img/Arthur.png](https://github.com/arthurostrauss)
+![https://github.com/arthurostrauss](img/Arthur.png)
