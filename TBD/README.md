@@ -52,10 +52,12 @@ An extensive document detailing potential applications can be found [here](https
 
 
 
-## Future work and possibilities 
+## Future work and possibilities  for improvement of results
 ### Pre-processing the data using quantum sub-routines
 We consider the possibility of Use more quantum subroutines for the preprocessing of the data ([Quantum PCA](https://arxiv.org/abs/1307.0401) on the raw images themselves, use of D-Wave annealer to proceed with feature selection). 
 ### Analysis of the circuit optimization for the VQC to look for better performance and faster results
+Optimize circuit depth for VQC.
+
 
 
 
