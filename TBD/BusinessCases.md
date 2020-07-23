@@ -8,7 +8,7 @@ As part of the IBM Challenge, our goal was not just to tackle the QIMP problem b
 
 Here are a few examples of potential application and further investigations.
 
-1. Mapping out molecules and atoms for the creation of new materials by ![applying ML](https://pubs.acs.org/doi/10.1021/acs.nanolett.9b04090) to accelerate material discovery, including the use of active learning to guide experimental design.
+1. Mapping out molecules and atoms for the creation of new materials by [applying ML](https://pubs.acs.org/doi/10.1021/acs.nanolett.9b04090) to accelerate material discovery, including the use of active learning to guide experimental design.
 
 2. Modeling molecular interactions at an atomic level, allowing new pharmaceuticals and ![medical research.](https://doi.org/10.1038/s41570-020-0189-9)
  
