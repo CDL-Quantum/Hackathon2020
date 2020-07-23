@@ -33,7 +33,7 @@ Both the generator and the discriminator are built with similar layered structur
 Our circuit was built for generating eigenstates of Sz. The label will dictate whether I want to to generate a |0> state or a |1> state. In order to accomplish this, we would expect that our generating circuit applies a control not operation conditioned on the labeled. This behavior should emerge from the minimization of the angles. The total system has 4 qubits: Out D, Label D, Out R|G and Label R|G. Two of these qubits go into the generator, and three (we reuse Out R|G) to the discriminator. 
 We recreated the results from the original paper, where 4 layers were employed for the discriminator and 2 for the generator, accounting for 42 total angle parameters. 
 
-In order to fully unlock the potential of GANs, it is necessary to consider the case where quantum states embed classical data.  This is a fundamental issue that was addressed in the [IBM directory](https://github.com/quantumhack/quantumhackthon/tree/master/IBM).
+In order to fully unlock the potential of GANs, it is necessary to consider the case where quantum states embed classical data.  This is a fundamental issue that was addressed in the [IBM directory](IBM).
 
 References: 
 
