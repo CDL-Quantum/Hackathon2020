@@ -36,3 +36,7 @@ Link to An extensive document detailing potential applications
 
 ## Future work and possibilities 
 Exploring other platforms
+
+## Business Application
+
+Check out the business proposals ![here]{https://github.com/olgOk/Hackathon2020/blob/master/TBD/BusinessCases.md) 
