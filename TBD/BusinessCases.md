@@ -6,6 +6,8 @@ As part of the IBM Challenge, our goal was not just to tackle the QIMP problem b
 
 More significantly, recent product launches and other announcements by Amazon Web Services, Microsoft, IBM, and Honeywell in the quantum computing space address AI and ML use cases to varying degrees. Recently, Google's launch of TensorFlow Quantum. This new software-only stack extends the widely adopted TensorFlow open-source ML library and modeling framework to support building and training of ML models to be processed on quantum computing platforms. These emerging trends indicate the importance of integrating existing ML frameworks to current quantum hardwares/clouds too.
 
+![CDL Hackaton](img/cml_qml.PNG)
+
 ## Business Applications and Potential Research
 
 Here are a few examples of potential application and further investigations.
