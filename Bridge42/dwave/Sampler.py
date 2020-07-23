@@ -11,4 +11,4 @@ class Sampler:
         bqm = dimod.make_quadratic(self.poly, strength, dimod.BINARY)
         sampler = neal.SimulatedAnnealingSampler()
         result = sampler.sample(bqm, num_reads=200)
-        return result.first.sample
+        return result.lowest().first.sample
