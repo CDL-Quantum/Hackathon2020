@@ -1,3 +1,5 @@
+![CDL Hackaton](img/CDL_logo.png)
+
 ## Tackling the IBM Challenge
 Our team has tackled the IBM Challenge to classify a large existing dataset of galaxy images using Quantum Machine Learning techniques. Quantum Image Processing(QIMP) is an emerging field in Quantum Information Processing and is set to provide speedup over its classical counterparts[1] The datasets are ever-increasing and with limited classical computational resources, it becomes important to explore methods to tackle this challenge.
 
