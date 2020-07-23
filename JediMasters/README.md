@@ -8,7 +8,7 @@ As part of the DWave challenge, we attempted to find an efficient way of generat
 
 As part of the IBM Challenge, we attempted the Galaxy classification with FRQI utilizing Quantum Image Classification.
 
-[Classical Method Solution](https://github.com/tina-seb/CohortProject_2020/blob/master/Project_2_VQE_Molecules/S1_Classical_Methods_Demo.ipynb)
+[Galaxy Classification](https://github.com/tina-seb/Hackathon2020/blob/master/JediMasters/IBM_Galaxy/ibmq_galaxy_test.ipynb)
 
 We have provided a brief explanation of the TSP Algorithm used for the food bank solution below :
 
