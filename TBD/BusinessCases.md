@@ -1,9 +1,9 @@
 ![CDL Hackaton](img/CDL_logo.png)
 
-## Business Applicaion and Potential Research
+## Business Application and Potential Research
 
 
-## Business Casses
+## Business Cases
 
 1. ![Airbus](https://www.airbus.com/innovation/industry-4-0/quantum-technologies.html) is interested in the QIMP for sorting and analyzing images 
 streamed by satellites. Thus, QIMP can be applied to classify satellites images.
