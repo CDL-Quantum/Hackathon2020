@@ -56,7 +56,7 @@ def knapsack_bqm(cities, values, weights, total_capacity, value_r=0, weight_r=0)
     weights = [weight*(1-weight_r) for weight in weights]
 
     # Q-Alpha - change values to value*(1-value_r)
-    # values = [value*(1-value_r) for value in values]
+    values = [value*(1-value_r) for value in values]
 
     # Hamiltonian xi-xi terms
     for k in range(x_size):
@@ -192,7 +192,8 @@ def main():
                         help="Number of samples to return")
     args = parser.parse_args()
     solution_set = solve_cities_from_csv(
-        args.data, args.total_capacity, args.num_reads, verbose=True)
+        args.data, args.total_capacity, value_r=0.8, weight_r=0.2,
+        num_reads=args.num_reads, verbose=True)
 
 
 if __name__ == '__main__':
