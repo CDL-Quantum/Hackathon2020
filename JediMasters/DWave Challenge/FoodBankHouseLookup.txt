@@ -1,0 +1,48 @@
+0,Columbus OH,1961 Cleveland Ave
+1,Columbus OH,1944 Frank Dr
+2,Columbus OH,3432 Main St
+3,Columbus OH,78 High Point St.
+4,Columbus OH,31 York Drive
+5,Columbus OH,9070 Ramblewood Ave.
+6,Columbus OH,98 Galvin Street
+7,Columbus OH,51 Columbia Street
+8,Columbus OH,8 Old Jackson Avenue
+9,Columbus OH,11 High Noon St.
+10,Columbus OH,7085 Myers St.
+11,Columbus OH,5 South Greystone Street
+12,Columbus OH,82 Paris Hill St.
+13,Columbus OH,9980 Brookside Dr.
+14,Columbus OH,23 S. Woodside Road
+15,Columbus OH,7798 Brown Drive
+16,Columbus OH,70 Coffee Ave.
+17,Columbus OH,7 Marvon Road
+18,Columbus OH,737 Pacific Street
+19,Columbus OH,23 Oak Meadow Drive
+20,Columbus OH,44 NW. San Pablo St.
+21,Columbus OH,8858 Canal Lane
+22,Columbus OH,417 Theatre Lane
+23,Columbus OH,16 Park Ave.
+24,Columbus OH,821 Garfield Rd.
+25,Columbus OH,977 Elizabeth Lane
+26,Columbus OH,9697 Bowman Drive
+27,Columbus OH,32 Southampton Street
+28,Columbus OH,7750 John Drive
+29,Columbus OH,8043 N. Glen Ridge Dr.
+30,Columbus OH,9304 Brickyard St.
+31,Columbus OH,7297 North Park Road
+32,Columbus OH,7678 Clinton Road
+33,Columbus OH,953 South Fieldstone Drive
+34,Columbus OH,69 Buckingham St.
+35,Columbus OH,3 Hillcrest Court
+36,Columbus OH,685 Oakland Court
+37,Columbus OH,7152 Augusta St.
+38,Columbus OH,349 W. Rockaway Drive
+39,Columbus OH,26 Walnut Drive
+40,Columbus OH,287 Military Dr.
+41,Columbus OH,64 Illinois Lane
+42,Columbus OH,7655 Catherine Road
+43,Columbus OH,92 South Country Club Rd.
+44,Columbus OH,8891 Vine Street
+45,Columbus OH,192 West Albany St.
+46,Columbus OH,19 Center Street
+47,Columbus OH,51 Lexington Dr.
