@@ -56,7 +56,7 @@ def knapsack_bqm(cities, values, weights, total_capacity, value_r=0, weight_r=0)
     weights = [weight*(1-weight_r) for weight in weights]
 
     # Q-Alpha - change values to value*(1-value_r)
-    # values = [value*(1-value_r) for value in values]
+    values = [value*(1-value_r) for value in values]
 
     # Hamiltonian xi-xi terms
     for k in range(x_size):
