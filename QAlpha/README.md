@@ -19,10 +19,10 @@
 
 Use `python solvers/knapsack.py -h` to get a description of the script and its options.
 
-Here's an example for running the solver with the data in `data.csv` and a nationwide capacity of 500000 sick people at once.
+Here's an example for running the solver with the data in `july.csv` and a nationwide capacity of 500000 sick people at once.
 
 ```
-python solvers/knapsack.py -d data.csv -t 500000
+python solvers/knapsack.py -d july.csv -t 500000
 ```
 
 ### From python code
@@ -32,7 +32,7 @@ Following on the example from above:
 ```
 from solvers.knapsack import solve_cities_from_csv
 
-solution_set = solve_cities_from_csv('data.csv', 500000)
+solution_set = solve_cities_from_csv('july.csv', 500000)
 ```
 
 See the docstrings in `solvers/knapsack.py` for specifications on the `solution_set` object.

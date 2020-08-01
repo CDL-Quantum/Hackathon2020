@@ -134,3 +134,42 @@ Using an existing dataset (for example [4] and one of the known image representa
 [4] https://data.galaxyzoo.org/
 [5] https://pdfs.semanticscholar.org/0a3b/dfb66973144792533d763e9edaec40b2785b.pdf
 [6] https://www.researchgate.net/publication/257641933_NEQR_A_novel_enhanced_quantum_representation_of_digital_images
+
+# Winners of the 2020 CDL Quantum Hackathon
+## Overall Winners:
+
+### First Place: Q-Alpha
+Submission: "Which cities to shut down" as a knapsack problem.
+
+Directory: https://github.com/CDL-Quantum/Hackathon2020/tree/master/QAlpha
+
+### Second Place: QBC
+Submission: Successfully implementing into PyTorch:
+1) Rotosolve optimizer. Relies heavily on Python built-ins and is slow because of it. However, since it is a non-gradient optimizer it cannot be put further in front of classical layers as gradients can't necessarily flow through it, so this is not a huge deal
+2) Quantum Natural Gradient -- utilises the qml.qnn.TorchLayer to create the circuit's representation as a tensor (this is required since it currently accesses the Fubini Metric tensor using the built-in qml circuit one). Then, calculates and updates the gradient in a fully pytorch way
+
+Directory: https://github.com/CDL-Quantum/Hackathon2020/tree/master/QBC
+
+### Third Place: Quantum Hack
+Submission: Complete construction of a QGAN using Xanadu's and IBM Q's infrastructure.
+
+Directory: https://github.com/CDL-Quantum/Hackathon2020/tree/master/QuantumHack
+
+## Technology Partner Challenge Winners:
+
+### D-wave: Q-Alpha
+Submission: "Which cities to shut down" as a knapsack problem.
+
+Directory: https://github.com/CDL-Quantum/Hackathon2020/tree/master/QAlpha
+
+### IBM Q: Physics in Stream
+Submission: Quantum Image Processing (QIMP) to classify a large existing dataset of galaxy images using Quantum Machine Learning techniques.
+
+Directory: https://github.com/CDL-Quantum/Hackathon2020/tree/master/TBD
+
+### Xanadu: QBC
+Submission: Submission: Successfully implementing into PyTorch:
+1) Rotosolve optimizer. Relies heavily on Python built-ins and is slow because of it. However, since it is a non-gradient optimizer it cannot be put further in front of classical layers as gradients can't necessarily flow through it, so this is not a huge deal
+2) Quantum Natural Gradient -- utilises the qml.qnn.TorchLayer to create the circuit's representation as a tensor (this is required since it currently accesses the Fubini Metric tensor using the built-in qml circuit one). Then, calculates and updates the gradient in a fully pytorch way
+
+Directory: https://github.com/CDL-Quantum/Hackathon2020/tree/master/QBC
